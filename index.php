@@ -14,7 +14,7 @@
             <li class="cursor-pointer hover:text-black hover:underline"><a href="index.php">Home</li></a>
             <li class="cursor-pointer hover:text-black hover:underline hover:font-medium font-serif"><a href="cata.html">Catalog</li></a>
             <li class="cursor-pointer hover:text-black hover:underline hover:font-medium font-serif"><a href="about.html">About</li></a>
-            <li class="cursor-pointer hover:text-black hover:underline hover:font-medium font-serif"><a href="contact.html">Contact-US</li></a>
+            <li class="cursor-pointer hover:text-black hover:underline hover:font-medium font-serif"><a href="contact.php">Contact-US</li></a>
             
             <?php
         // Start PHP code
@@ -24,11 +24,11 @@
         if(isset($_SESSION["username"])) {
             // If logged in, display the username and a logout link
             $username = $_SESSION["username"];
-            echo '<li class="cursor-pointer hover:text-black hover:underline hover:font-medium font-serif">Welcome, ' . $username . '</li>';
+            echo '<li class="cursor-pointer hover:text-black hover:underline hover:font-medium font-serif"><a href="account.php"> Welcome, ' . $username . '</a></li>';
             echo '<li class="cursor-pointer hover:text-black hover:underline hover:font-medium font-serif"><a href="logout.php">Logout</a></li>';
         } else {
             // If not logged in, display a login link
-            echo '<li class="cursor-pointer hover:text-black hover:underline hover:font-medium font-serif"><a href="login.php">Login</a></li>';
+            echo '<li class="cursor-pointer hover:text-black hover:underline hover:font-medium font-serif"><a href="login.html">Login</a></li>';
            echo' <li class="cursor-pointer hover:text-black hover:underline hover:font-medium font-serif"><a href="sign-up.html">signup</li></a>';
         }
         ?>

@@ -4,27 +4,27 @@ session_start();
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Check if username and password are provided
-    if (isset($_POST["username"]) && isset($_POST["password"])) {
-        // Validate username and password (you may add more validation here)
-        $username = $_POST["username"];
+    // Check if email and password are provided
+    if (isset($_POST["email"]) && isset($_POST["password"])) {
+        // Validate email and password (you may add more validation here)
+        $email = $_POST["email"];
         $password = $_POST["password"];
 
-        // Example: Check if username and password are correct (replace with your authentication logic)
-        if ($username === "admin" && $password === "password") {
+        // Example: Check if email and password are correct (replace with your authentication logic)
+        if ($email === "user@example.com" && $password === "password") {
             // Set session variables
-            $_SESSION["username"] = $username;
+            $_SESSION["email"] = $email;
 
             // Redirect to the index page or any other page after successful login
             header("Location: index.php");
             exit;
         } else {
-            // If username or password is incorrect, display an error message
-            $error = "Invalid username or password.";
+            // If email or password is incorrect, display an error message
+            $error = "Invalid email or password.";
         }
     } else {
-        // If username or password is not provided, display an error message
-        $error = "Username and password are required.";
+        // If email or password is not provided, display an error message
+        $error = "Email and password are required.";
     }
 }
 ?>
@@ -39,6 +39,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body class="bg-gray-100 flex justify-center items-center h-screen">
     <div class="max-w-md w-full bg-white p-8 rounded-lg shadow-lg">
         <h2 class="text-2xl font-bold mb-4">Login</h2>
+        <?php if (isset($error)) : ?>
+            <div class="text-red-500 mb-4"><?php echo $error; ?></div>
+        <?php endif; ?>
         <form action="login.php" method="POST">
             <div class="mb-4">
                 <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
@@ -53,4 +56,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 </body>
 </html>
-

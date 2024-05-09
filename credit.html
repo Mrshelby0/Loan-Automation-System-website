@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credit Score Widget</title>
+  <!-- Include Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-200">
+    <nav class="bg-red-800 text-white flex justify-between">
+        <img src="logo.jpg" class="w-20 mx-10 rounded-3xl" alt="">
+        <ul class="px-28 py-4 flex space-x-11 text-2xl justify-end items-center">
+            <li class="cursor-pointer hover:text-black hover:underline"><a href="index.php">Home</li></a>
+            <li class="cursor-pointer hover:text-black hover:underline hover:font-medium font-serif"><a href="cata.html">Catalog</li></a>
+            <li class="cursor-pointer hover:text-black hover:underline hover:font-medium font-serif"><a href="about.html">About</li></a>
+            <li class="cursor-pointer hover:text-black hover:underline hover:font-medium font-serif"><a href="contact.php">Contact-US</li></a>
+
+        </ul>
+    </nav>
+    
+  <div class="credit-score-widget mt-10 max-w-sm mx-auto p-4 border rounded-lg shadow-md bg-white">
+    <div class="text-4xl font-bold text-center text-gray-800 mb-2" id="credit-score">Loading...</div>
+    <div class="text-lg font-semibold text-center text-gray-600 mb-2">Your Credit Score</div>
+  </div>
+
+  <script>
+    function generateRandomScore() {
+      // Generate a random credit score between 300 and 850
+      var creditScore = Math.floor(Math.random() * (850 - 300 + 1)) + 300;
+
+      // Update the credit score value in the widget
+      document.getElementById('credit-score').innerText = creditScore;
+    }
+
+    // Call the function when the page loads
+    window.onload = generateRandomScore;
+  </script>
+</body>
+</html>

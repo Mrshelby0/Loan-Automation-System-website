@@ -66,7 +66,7 @@ $conn->close();
             <li class="cursor-pointer hover:text-black hover:underline"><a href="index.html">Home</li></a>
             <li class="cursor-pointer hover:text-black hover:underline hover:font-medium font-serif"><a href="cata.html">Catalog</li></a>
             <li class="cursor-pointer hover:text-black hover:underline hover:font-medium font-serif"><a href="about.html">About</li></a>
-            <li class="cursor-pointer hover:text-black hover:underline hover:font-medium font-serif"><a href="contact.html">Contact-US</li></a>
+            <li class="cursor-pointer hover:text-black hover:underline hover:font-medium font-serif"><a href="contact.php">Contact-US</li></a>
 
         </ul>
     </nav>
