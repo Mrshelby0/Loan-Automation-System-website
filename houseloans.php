@@ -63,7 +63,7 @@ $conn->close();
     <nav class="bg-red-800 text-white flex justify-between">
         <img src="logo.jpg" class="w-20 mx-10 rounded-3xl" alt="">
         <ul class="px-28 py-4 flex space-x-11 text-2xl justify-end items-center">
-            <li class="cursor-pointer hover:text-black hover:underline"><a href="index.html">Home</li></a>
+            <li class="cursor-pointer hover:text-black hover:underline"><a href="index.php">Home</li></a>
             <li class="cursor-pointer hover:text-black hover:underline hover:font-medium font-serif"><a href="cata.html">Catalog</li></a>
             <li class="cursor-pointer hover:text-black hover:underline hover:font-medium font-serif"><a href="about.html">About</li></a>
             <li class="cursor-pointer hover:text-black hover:underline hover:font-medium font-serif"><a href="contact.php">Contact-US</li></a>
@@ -138,10 +138,21 @@ $conn->close();
             <label for="bank_number" class="block text-gray-700 font-bold mb-2">Bank Number</label>
             <input type="text" id="bank_number" name="bank_number" class="w-full px-3 hover:border-red-500 py-2 border rounded-md">
         </div>
-
+        <h2 class="text-2xl font-bold mb-4">Loan Details</h2>
+        <div class="mb-4">
+            <label for="amount" class="block text-gray-700 font-bold mb-2" >Loan Amount</label>
+            <input type="number" id="amount" name="amount" class="w-full px-3 hover:border-red-500 py-2 border rounded-md">
+        </div>
+        <div class="mb-4">
+            <label for="term" class="block text-gray-700 font-bold mb-2" >Loan Term</label>
+            <input type="number" id="term" name="term" class="w-full px-3 hover:border-red-500 py-2 border rounded-md">
+        </div>
         <button type="submit" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">Submit</button>
     </form>
 </div>
-
+<h3 class="text-justify  py-8">Loan Calculator:-Use Loan Calculator to calculate the right term and right value for your loan</h3>
+<a href="LOANCALCULATER.HTML">
+    <button type="button" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Calculator</button>
+</a>
 </body>
 </html>

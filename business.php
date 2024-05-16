@@ -29,10 +29,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $ifsc_code = $_POST["ifsc_code"];
     $branch_number = $_POST["branch_number"];
     $bank_number = $_POST["bank_number"];
+    $amount = $_POST["amount"];
+    $term = $_POST["term"];
 
     // Prepare and bind SQL statement
-    $stmt = $conn->prepare("INSERT INTO busloan (father_name, mother_name, phone_number, email, address, dob, annual_income, marital_status, occupation, account_number, ifsc_code, branch_number, bank_number) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("ssssssdssssss", $father_name, $mother_name, $phone_number, $email, $address, $dob, $annual_income, $marital_status, $occupation, $account_number, $ifsc_code, $branch_number, $bank_number);
+    $stmt = $conn->prepare("INSERT INTO busloan (father_name, mother_name, phone_number, email, address, dob, annual_income, marital_status, occupation, account_number, ifsc_code, branch_number, bank_number, amount, term) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?)");
+    $stmt->bind_param("ssssssdssssss", $father_name, $mother_name, $phone_number, $email, $address, $dob, $annual_income, $marital_status, $occupation, $account_number, $ifsc_code, $branch_number, $bank_number, $amount, $term);
 
     // Execute the statement
     if ($stmt->execute() === TRUE) {
