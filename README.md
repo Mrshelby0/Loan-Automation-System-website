@@ -55,9 +55,7 @@ We welcome contributions from developers and banking experts to enhance our Loan
 
 This project is licensed under the [Insert License Name] - see the [LICENSE](LICENSE) file for details.
 
-## Contact
 
-For more information or support, please contact our team at [support@lenadenabank.com](mailto:support@lenadenabank.com).
 
 ---
 
